@@ -15,19 +15,19 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class RabbitConfig {
-//    @Bean
-//    public DirectExchange simpleExchange(){
-//        return new DirectExchange("SIMPLE_EXCHANGE");
-//    }
-//
-//    @Bean
-//    public Queue simpleQueue(){
-//        return new Queue("SIMPLE_QUEUE");
-//    }
-//
-//    @Bean
-//    public Binding bindFirst(@Qualifier("simpleQueue") Queue queue,
-//                             @Qualifier("simpleExchange") DirectExchange exchange){
-//        return BindingBuilder.bind(queue).to(exchange).with("wuzz.test");
-//    }
+    @Bean
+    public DirectExchange simpleExchange(){
+        return new DirectExchange("SIMPLE_EXCHANGE");
+    }
+
+    @Bean
+    public Queue simpleQueue(){
+        return new Queue("SIMPLE_QUEUE");
+    }
+
+    @Bean
+    public Binding bindFirst(@Qualifier("simpleQueue") Queue queue,
+                             @Qualifier("simpleExchange") DirectExchange exchange){
+        return BindingBuilder.bind(queue).to(exchange).with("wuzz.test");
+    }
 }
