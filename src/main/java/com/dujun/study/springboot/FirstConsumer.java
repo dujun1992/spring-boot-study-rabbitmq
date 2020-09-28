@@ -25,7 +25,7 @@ public class FirstConsumer {
         System.out.println("Received message : '" + msg + "'");
         System.out.println("consumerTag : " +  o.getMessageProperties().getConsumerTag());
         System.out.println("deliveryTag : " +  o.getMessageProperties().getDeliveryTag());
-
+        
         //存储文件
         IOTest.byteArrayToFile(o.getBody(), "C:\\Users\\DuJun\\Desktop\\tmp.log"+o.getMessageProperties().getDeliveryTag());  //字节数组转为图片
     }
