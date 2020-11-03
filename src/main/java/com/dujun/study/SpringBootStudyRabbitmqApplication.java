@@ -16,7 +16,7 @@ public class SpringBootStudyRabbitmqApplication {
 
         ConfigurableApplicationContext ca  = SpringApplication.run(SpringBootStudyRabbitmqApplication.class, args);
         MyProducer myProducer = (MyProducer) ca.getBean("myProducer");
-        for(int i =0; i<10;i++){
+        for(int i =0; i<2;i++){
 
             if(i%2== 0){
 

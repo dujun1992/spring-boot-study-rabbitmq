@@ -32,11 +32,11 @@ public class MyConsumer {
 
         // 声明交换机
         // String exchange, String type, boolean durable, boolean autoDelete, Map<String, Object> arguments
-        channel.exchangeDeclare(EXCHANGE_NAME,"direct",false, false, null);
+        channel.exchangeDeclare(EXCHANGE_NAME,"direct",true, false, null);
 
         // 声明队列
         // String queue, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(QUEUE_NAME, true, false, false, null);
         System.out.println(" Waiting for message....");
 
         // 绑定队列和交换机
